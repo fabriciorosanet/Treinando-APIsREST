@@ -4,6 +4,8 @@ namespace Valorant_APIsREST.Models
 {
     public class Agente
     {
+        public int Id { get; set; }
+
         [Required(ErrorMessage = "O nome do agente é obrigatório")]
         [StringLength(20, ErrorMessage = "Você excedeu o número de caracteres")]
         public string Nome { get; set; }
