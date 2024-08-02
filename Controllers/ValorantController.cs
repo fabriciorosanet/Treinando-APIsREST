@@ -20,4 +20,10 @@ public class ValorantController : Controller
         Console.WriteLine(agente.QtdDeHorasJogadas);
     }
 
+    [HttpGet]
+    public IEnumerable<Agente>RecuperaAgentes()
+    {
+        return agentes;
+    }
+
 }
