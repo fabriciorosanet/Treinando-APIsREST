@@ -1,4 +1,11 @@
+using Microsoft.EntityFrameworkCore;
+using Treinando_APIsREST.Data;
+
 var builder = WebApplication.CreateBuilder(args);
+
+var connectionString = builder.Configuration.GetConnectionString("AgenteConnection");
+
+builder.Services.AddDbContext<DatabaseContext>(opts => opts.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 
 // Add services to the container.
 
